@@ -1,29 +1,35 @@
 PRODUCT_PACKAGES += \
-			GoogleServicesFramework \
-			Phonesky \
-			PrebuiltGmsCore \
-			Chrome
+		GoogleServicesFramework \
+		GmsCore \
+		Phonesky
 
 PRODUCT_PROPERTY_OVERRIDES += \
-			ro.addon.type=gapps \
-			ro.addon.arch=arm \
-			ro.addon.sdk=30 \
-			ro.addon.platform=11.0 \
-			ro.addon.open_type=pico \
-			ro.addon.open_version=20220215
+		ro.android=14.0 \
+		ro.sdk=34 \
+		ro.arch=arm64 \
+		ro.build_date=20230808
 
-LOCAL_PATH:= vendor/amlogic/google
+LOCAL_PATH:= vendor/rockchip/google
 
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/framework/com.google.android.media.effects.jar:system/framework/com.google.android.media.effects.jar \
-	$(LOCAL_PATH)/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
-	$(LOCAL_PATH)/etc/permissions/split-permissions-google.xml:system/etc/permissions/split-permissions-google.xml \
-	$(LOCAL_PATH)/etc/permissions/privapp-permissions-google.xml:system/etc/permissions/privapp-permissions-google.xml \
-	$(LOCAL_PATH)/etc/default-permissions/default-permissions.xml:system/etc/default-permissions/default-permissions.xml \
-	$(LOCAL_PATH)/etc/default-permissions/opengapps-permissions-q.xml:system/etc/default-permissions/opengapps-permissions-q.xml \
-	$(LOCAL_PATH)/etc/sysconfig/google.xml:system/etc/sysconfig/google.xml \
-	$(LOCAL_PATH)/etc/sysconfig/google_exclusives_enable.xml:system/etc/sysconfig/google_exclusives_enable.xml \
-	$(LOCAL_PATH)/etc/sysconfig/google_build.xml:system/etc/sysconfig/google_build.xml \
-	$(LOCAL_PATH)/etc/sysconfig/google-hiddenapi-package-whitelist.xml:system/etc/sysconfig/google-hiddenapi-package-whitelist.xml \
-	$(LOCAL_PATH)/etc/preferred-apps/google.xml:system/etc/preferred-apps/google.xml \
-	$(LOCAL_PATH)/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+$(LOCAL_PATH)/framework/com.google.android.dialer.support.jar:product/framework/com.google.android.dialer.support.jar \
+$(LOCAL_PATH)/etc/permissions/litegapps-permissions.xml:product/etc/permissions/litegapps-permissions.xml \
+$(LOCAL_PATH)/etc/permissions/split-permissions-google.xml:product/etc/permissions/split-permissions-google.xml \
+$(LOCAL_PATH)/etc/permissions/com.google.android.dialer.support.xml:product/etc/permissions/com.google.android.dialer.support.xml \
+$(LOCAL_PATH)/etc/permissions/privapp-permissions-google-p.xml:product/etc/permissions/privapp-permissions-google-p.xml \
+$(LOCAL_PATH)/etc/default-permissions/default-permissions.xml:product/etc/default-permissions/default-permissions.xml \
+$(LOCAL_PATH)/etc/default-permissions/litegapps-default-permissions.xml:product/etc/default-permissions/litegapps-default-permissions.xml \
+$(LOCAL_PATH)/etc/preferred-apps/google.xml:product/etc/preferred-apps/google.xml \
+$(LOCAL_PATH)/etc/sysconfig/google-hiddenapi-package-whitelist.xml:product/etc/sysconfig/google-hiddenapi-package-whitelist.xml \
+$(LOCAL_PATH)/etc/sysconfig/nexus.xml:product/etc/sysconfig/nexus.xml \
+$(LOCAL_PATH)/etc/sysconfig/pixel_experience_2017.xml:product/etc/sysconfig/pixel_experience_2017.xml \
+$(LOCAL_PATH)/etc/sysconfig/pixel_experience_2019.xml:product/etc/sysconfig/pixel_experience_2019.xml \
+$(LOCAL_PATH)/etc/sysconfig/pixel_experience_2020_midyear.xml:product/etc/sysconfig/pixel_experience_2020_midyear.xml \
+$(LOCAL_PATH)/etc/sysconfig/preinstalled-packages-product-pixel-2017-and-newer.xml:product/etc/sysconfig/preinstalled-packages-product-pixel-2017-and-newer.xml \
+$(LOCAL_PATH)/etc/sysconfig/pixel_experience_2020.xml:product/etc/sysconfig/pixel_experience_2020.xml \
+$(LOCAL_PATH)/etc/sysconfig/google_build.xml:product/etc/sysconfig/google_build.xml \
+$(LOCAL_PATH)/etc/sysconfig/google.xml:product/etc/sysconfig/google.xml \
+$(LOCAL_PATH)/etc/sysconfig/pixel_experience_2019_midyear.xml:product/etc/sysconfig/pixel_experience_2019_midyear.xml \
+$(LOCAL_PATH)/etc/sysconfig/pixel_experience_2018.xml:product/etc/sysconfig/pixel_experience_2018.xml \
+$(LOCAL_PATH)/etc/sysconfig/google-staged-installer-whitelist.xml:product/etc/sysconfig/google-staged-installer-whitelist.xml \
+$(LOCAL_PATH)/etc/sysconfig/nga.xml:product/etc/sysconfig/nga.xml
