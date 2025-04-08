@@ -51,6 +51,14 @@
             <type name="image/vnd.wap.wbmp" />
         </filter>
     </item>
+    <item name="com.google.android.apps.nbu.files/.gateway.browse.BrowseGatewayHandler">
+        <filter>
+            <action name="android.intent.action.VIEW" />
+            <cat name="android.intent.category.DEFAULT" />
+            <scheme name="content" />
+            <type name="vnd.android.document/root" />
+        </filter>
+    </item>
     <item name="com.google.android.apps.photos/.home.HomeActivity">
         <filter>
             <action name="android.intent.action.MAIN" />
@@ -97,5 +105,21 @@
             <type name="application/x-mspowerpoint" />
 
       </filter>
+    </item>
+    <item name="com.google.android.gm/com.google.android.gm.ComposeActivityGmailExternal">
+        <filter>
+            <action name="android.intent.action.VIEW" />
+            <cat name="android.intent.category.DEFAULT" />
+            <cat name="android.intent.category.BROWSABLE" />
+            <scheme name="mailto" />
+        </filter>
+    </item>
+    <item name="com.google.android.gm/com.google.android.gm.ComposeActivityGmailExternal">
+        <filter>
+            <action name="android.intent.action.SENDTO" />
+            <cat name="android.intent.category.DEFAULT" />
+            <cat name="android.intent.category.BROWSABLE" />
+            <scheme name="mailto" />
+        </filter>
     </item>
 </preferred-activities>
