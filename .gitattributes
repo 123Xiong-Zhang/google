@@ -1,1 +1,2 @@
 apps/Chrome/Chrome.apk filter=lfs diff=lfs merge=lfs -text
+apps/Phonesky/Phonesky.apk filter=lfs diff=lfs merge=lfs -text
